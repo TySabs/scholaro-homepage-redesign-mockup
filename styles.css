@@ -117,7 +117,27 @@ a { color: inherit; text-decoration: none; }
 }
 @media (max-width: 720px) {
   .container { width:min(100% - 24px, 1160px); }
-  .header-actions { width:100%; justify-content:flex-start; flex-wrap:wrap; }
+  .topbar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand { min-width: 0; }
+  .header-actions,
+  .main-nav {
+    display: none;
+  }
+  .mobile-menu {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: #fff;
+  }
   .hero { padding-top: 28px; }
   .hero h1 { font-size: 2.5rem; }
   .stats-grid { grid-template-columns:1fr; }
