@@ -32,7 +32,17 @@
         <a class="btn btn-secondary" href="#report-check">Check Report</a>
         <a class="btn btn-primary" href="#demo">Book a demo</a>
       </div>
-      <button class="mobile-menu" aria-label="Open menu">☰</button>
+      <button class="mobile-menu" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
+      <div class="mobile-nav" id="mobileNav">
+        <a href="#products">Products</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#trust">Why Scholaro</a>
+        <a href="#resources">Resources</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#">Sign in</a>
+        <a href="#report-check">Check Report</a>
+        <a href="#demo">Book a demo</a>
+      </div>
     </div>
   </header>
 
@@ -244,5 +254,21 @@
       </div>
     </div>
   </footer>
+  <script>
+    const menuButton = document.querySelector('.mobile-menu');
+    const mobileNav = document.getElementById('mobileNav');
+    if (menuButton && mobileNav) {
+      menuButton.addEventListener('click', () => {
+        const open = mobileNav.classList.toggle('open');
+        menuButton.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      mobileNav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.remove('open');
+          menuButton.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  </script>
 </body>
 </html>
