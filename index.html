@@ -267,7 +267,7 @@
         <p>Credential evaluation, international GPA conversion, document translation, and education equivalency tools for students, institutions, and employers.</p>
       </div>
       <div class="footer-grid-links">
-        <details class="footer-col">
+        <details class="footer-col footer-services-col">
           <summary>Services</summary>
           <div class="footer-links-stack">
             <a href="https://www.scholaro.com/reports/Credential-Evaluation">Credential Evaluation</a>
@@ -336,6 +336,18 @@
         });
       });
     }
+
+    const servicesFooter = document.querySelector('.footer-services-col');
+    const syncFooterState = () => {
+      if (!servicesFooter) return;
+      if (window.innerWidth > 720) {
+        servicesFooter.setAttribute('open', 'open');
+      } else {
+        servicesFooter.removeAttribute('open');
+      }
+    };
+    syncFooterState();
+    window.addEventListener('resize', syncFooterState);
   </script>
 </body>
 </html>
