@@ -26,19 +26,28 @@ a { color: inherit; text-decoration: none; }
   background: rgba(255,255,255,0.86); backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(223,229,241,0.8);
 }
-.topbar { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:16px 0; }
-.brand { display:flex; align-items:center; gap:12px; min-width: 250px; }
+.topbar { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:16px 0; }
+.brand { display:flex; align-items:center; gap:12px; min-width: 220px; }
 .brand-mark {
   width:42px; height:42px; border-radius:14px; display:grid; place-items:center;
   background: linear-gradient(135deg, var(--primary), #55a4ff); color:#fff; font-weight:800;
 }
 .brand-name { font-weight: 800; }
 .brand-sub { font-size: 11px; color: var(--muted); line-height: 1.25; max-width: 150px; }
-.main-nav { display:flex; gap:18px; color: var(--muted); font-weight:600; font-size: 15px; }
+.header-search { flex: 0 1 240px; }
+.header-search input {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  padding: 11px 14px;
+  font: inherit;
+  background: rgba(255,255,255,0.9);
+}
+.main-nav { display:flex; gap:14px; color: var(--muted); font-weight:600; font-size: 14px; }
 .main-nav a { white-space: nowrap; }
 .main-nav a:hover, .footer-links a:hover, .text-link:hover { color: var(--text); }
 .header-actions { display:flex; align-items:center; gap:10px; flex-shrink: 0; }
-.header-actions .text-link { white-space: nowrap; font-size: 15px; }
+.header-actions .text-link { white-space: nowrap; font-size: 14px; }
 .mobile-menu { display:none; background:none; border:none; font-size:26px; }
 .mobile-nav {
   display: none !important;
@@ -190,10 +199,12 @@ a { color: inherit; text-decoration: none; }
 }
 @media (max-width: 1180px) {
   .brand-sub { display: none; }
-  .main-nav { gap: 14px; font-size: 14px; }
-  .header-actions .text-link { font-size: 14px; }
+  .header-search { flex-basis: 180px; }
+  .main-nav { gap: 10px; font-size: 13px; }
+  .header-actions .text-link { font-size: 13px; }
 }
 @media (max-width: 1024px) {
+  .header-search,
   .main-nav { display:none; }
   .mobile-menu { display:block; }
   .hero-grid, .two-col, .card-grid.three-up, .trust-grid, .mini-panels, .report-check-card, .cta-panel { grid-template-columns:1fr; flex-direction:column; }
