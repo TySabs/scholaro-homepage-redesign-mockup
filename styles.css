@@ -1,14 +1,14 @@
 :root {
-  --bg: #f7f8fc;
+  --bg: #fbf8f2;
   --surface: #ffffff;
-  --surface-2: #f1f4fb;
-  --text: #152033;
-  --muted: #61708b;
-  --border: #dfe5f1;
-  --primary: #2458ff;
-  --primary-dark: #173fbc;
-  --accent: #08b39a;
-  --shadow: 0 18px 50px rgba(23, 43, 86, 0.08);
+  --surface-2: #f9f3e8;
+  --text: #3b2f28;
+  --muted: #816a5b;
+  --border: #ecdcc8;
+  --primary: #d98b14;
+  --primary-dark: #b66b00;
+  --accent: #f1c94b;
+  --shadow: 0 18px 50px rgba(108, 72, 22, 0.10);
   --radius: 22px;
 }
 * { box-sizing: border-box; }
@@ -17,7 +17,7 @@ body {
   margin: 0;
   font-family: Inter, system-ui, sans-serif;
   color: var(--text);
-  background: linear-gradient(180deg, #fbfcff 0%, #f3f6fb 100%);
+  background: linear-gradient(180deg, #fffdf8 0%, #f8f1e6 100%);
 }
 a { color: inherit; text-decoration: none; }
 .container { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
@@ -30,7 +30,13 @@ a { color: inherit; text-decoration: none; }
 .brand { display:flex; align-items:center; gap:12px; min-width: 220px; }
 .brand-mark {
   width:42px; height:42px; border-radius:14px; display:grid; place-items:center;
-  background: linear-gradient(135deg, var(--primary), #55a4ff); color:#fff; font-weight:800;
+  background: linear-gradient(135deg, #fff4d6, #ffe5b5); color:#fff; font-weight:800;
+  overflow: hidden;
+}
+.brand-mark-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .brand-name { font-weight: 800; }
 .brand-sub { font-size: 11px; color: var(--muted); line-height: 1.25; max-width: 150px; }
@@ -135,7 +141,7 @@ a { color: inherit; text-decoration: none; }
 .hero { padding: 24px 0 34px; }
 .hero-grid { display:grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items:center; }
 .eyebrow {
-  display:inline-flex; padding:8px 12px; border-radius:999px; background:#e9f0ff; color: var(--primary);
+  display:inline-flex; padding:8px 12px; border-radius:999px; background:#fff0d8; color: var(--primary);
   font-size: 13px; font-weight: 700; margin-bottom: 16px;
 }
 .hero h1 { font-size: clamp(2.5rem, 5vw, 4.4rem); line-height: 1.02; margin: 0 0 18px; letter-spacing:-0.04em; }
